@@ -1,8 +1,7 @@
-import { seed } from "./seed.js";
 import { findMatches } from "./search.js";
+const movieForm = document.getElementById("movie-form")
 
-// seed()
+movieForm.addEventListener("submit", e => {
+    e.preventDefault()
 
-// TEST
-// const results = await findMatches("something stupid and fun")
-// console.log(results)
+})

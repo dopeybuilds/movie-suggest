@@ -1,21 +1,26 @@
 <!doctype html>
-<html>
-    <head>
-        <title>PopChoice</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-    <header>movie-suggest</header>
-    <form id="movie-form">
-        <label for ="question-1" >What's your favorite movie and why?</label>
-        <textarea id="question-1"></textarea>
-        <label for ="question-2" >Are you in the mood for something new or a classic?</label>
-        <textarea id="question-2"></textarea>
-        <label for ="question-3" >Do you wanna have fun or do you want something serious?</label>
-        <textarea id="question-3"></textarea>
+<html lang="en">
+<head>
+    <title>PopChoice</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>movie-suggest</header>
+<form id="movie-form">
+    <label for="question-1">What's your favorite movie and why?</label>
+    <textarea id="question-1" required></textarea>
+    <label for="question-2">Are you in the mood for something new or a classic?</label>
+    <textarea id="question-2" required></textarea>
+    <label for="question-3">Do you want something fun, or serious?</label>
+    <textarea id="question-3" required></textarea>
+    <button type="submit">Let's Go</button>
+</form>
+<section id="result" hidden>
+    <h2 id="title"></h2>
+    <p id="description"></p>
+    <button id="next-movie-button">Next Movie</button>
+</section>
 
-    </form>
-
-        <script type="module" src="index.js"></script>
-    </body>
+<script type="module" src="index.js"></script>
+</body>
 </html> 
