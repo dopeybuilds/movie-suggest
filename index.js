@@ -12,11 +12,18 @@ movieForm.addEventListener("submit", async e => {
     const questionOne = document.getElementById("question-1").value
     const questionTwo = document.getElementById("question-2").value
     const questionThree = document.getElementById("question-3").value
-
     const userText = `${questionOne}, ${questionTwo}, ${questionThree}`;
-
     const result = await findMatches(userText);
-    console.log(result)
+
+    if (!result || result.length === 0) {
+        alert("No results found")
+    } else {
+        matchesArray = result
+        currentIndex = 0
+        movieForm.hidden = true;
+        resultSection.hidden = false;
+        showMovie()
+    }
 })
 
 function showMovie() {
@@ -30,3 +37,14 @@ function showMovie() {
         movieNextBtn.textContent = "Next Movie"
     }
 }
+
+movieNextBtn.addEventListener("click", e => {
+    if (currentIndex === matchesArray.length - 1) {
+        movieForm.hidden = false;
+        resultSection.hidden = true;
+        movieForm.reset()
+    } else {
+        currentIndex++
+        showMovie()
+    }
+})

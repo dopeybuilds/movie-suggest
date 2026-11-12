@@ -15,6 +15,7 @@ export async function findMatches(text) {
 
     if (error) {
         console.error(error)
-    } else
+    } else {
         return data
+    }
 }
