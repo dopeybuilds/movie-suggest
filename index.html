@@ -1,24 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>ReelTalk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <meta charset="UTF-8">
+<!-- FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="glow glow-amber"></div>
 <div class="glow glow-purple"></div>
 
 <main>
-<header>movie-suggest</header>
+<header>
+    <h1>Reel<span>Talk</span></h1>
+</header>
 <form id="movie-form">
     <label for="question-1">What's your favorite movie and why?</label>
-    <textarea id="question-1" required></textarea>
+    <textarea id="question-1" placeholder="Type here...." required></textarea>
     <label for="question-2">Are you in the mood for something new or a classic?</label>
-    <textarea id="question-2" required></textarea>
+    <textarea id="question-2" placeholder="Type here...." required></textarea>
     <label for="question-3">Do you want something fun, or serious?</label>
-    <textarea id="question-3" required></textarea>
+    <textarea id="question-3" placeholder="Type here...." required></textarea>
     <button type="submit">Let's Go</button>
 </form>
 <section id="result" hidden>
