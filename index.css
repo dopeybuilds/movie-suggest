@@ -127,6 +127,12 @@ button:active {
     transform: scale(0.95);
 }
 
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
 /* Background glows */
 .glow {
     position: fixed;
@@ -153,4 +159,25 @@ button:active {
     opacity: 0.25;
     bottom: 10%;
     right: -100px;
+}
+
+/* Movie detail chips */
+#details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#details:empty {
+    display: none;
+}
+
+.chip {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(245, 185, 66, 0.12);
+    color: var(--accent-color);
+    border: 1px solid rgba(245, 185, 66, 0.3);
 }
